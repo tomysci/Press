@@ -1,0 +1,36 @@
+# ==========================================================
+# .htaccess: Penerbit AISU
+# Pretty URL + Keamanan Ekstrem
+# ==========================================================
+
+# Matikan directory browsing
+Options -Indexes
+
+# Proteksi file konfigurasi, database, dan hidden files
+<FilesMatch "^(config\.php|schema\.sql|\.env|\.git)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Dynamic sitemap rewrite
+    RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+    # Pretty URL untuk Halaman Publik
+    RewriteRule ^katalog/?$ katalog.php [L]
+    RewriteRule ^pengiriman/?$ pengiriman.php [L]
+    RewriteRule ^tentang/?$ tentang.php [L]
+    RewriteRule ^buku/([0-9]+)/?$ detail.php?id=$1 [L,QSA]
+</IfModule>
+
+# Caching browser untuk static assets
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+</IfModule>

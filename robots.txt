@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /config.php
+Disallow: /sql/
+Allow: /
+Allow: /assets/
+Allow: /uploads/cover/
+
+Sitemap: https://www.aisu.or.id/sitemap.xml

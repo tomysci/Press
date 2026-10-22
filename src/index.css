@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* Aturan Keras Penerbit AISU:
+   1. Font size maksimal 11px
+   2. Zero animation (no transition, no animation, no transform)
+   3. Dark navy minimal
+*/
+
+* {
+  font-size: 11px !important;
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #070e17;
+  color: #cbd5e1;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: 11px !important;
+}

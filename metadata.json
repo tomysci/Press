@@ -1,0 +1,6 @@
+{
+  "name": "Penerbit Asosiasi Informatika Sumatera Utara (AISU)",
+  "description": "Aplikasi web Native PHP 7.4 ringan penerbit buku Asosiasi Informatika Sumatera Utara (AISU) dengan katalog lengkap, SEO ekstrem, dan panel admin.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
